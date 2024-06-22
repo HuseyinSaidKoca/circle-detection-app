@@ -1,0 +1,13 @@
+version: '3'
+services:
+  node-app:
+    image: flask-app
+    container_name: flask-app-container
+    ports:
+      - "4000:4000"
+
+  nginx:
+    image: predict-app
+    container_name: predict-app-container
+    ports:
+      - "5000:5000"
